@@ -1,0 +1,7 @@
+query Repository { 
+  viewer { 
+    repository(name: "Apollo-Codegen-wrapper") {
+       ...RepositoryInfo
+    }
+  }
+}

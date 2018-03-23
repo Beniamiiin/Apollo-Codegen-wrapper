@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		101F2DEB42B95054B6F0D837 /* Pods_ApolloCodegen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0459248B11CC2B366463087D /* Pods_ApolloCodegen.framework */; };
+		114AD9162065685E0053E531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114AD9152065685E0053E531 /* AppDelegate.swift */; };
+		114AD9182065685E0053E531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114AD9172065685E0053E531 /* ViewController.swift */; };
+		114AD91B2065685E0053E531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114AD9192065685E0053E531 /* Main.storyboard */; };
+		114AD91D2065685E0053E531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114AD91C2065685E0053E531 /* Assets.xcassets */; };
+		114AD9202065685E0053E531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114AD91E2065685E0053E531 /* LaunchScreen.storyboard */; };
+		114AD930206571C70053E531 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 114AD92F206571C70053E531 /* schema.json */; };
+		114AD932206571D70053E531 /* RepositoryFragments.graphql in Sources */ = {isa = PBXBuildFile; fileRef = 114AD931206571D70053E531 /* RepositoryFragments.graphql */; };
+		114AD934206571E10053E531 /* RepositoryRequests.graphql in Sources */ = {isa = PBXBuildFile; fileRef = 114AD933206571E10053E531 /* RepositoryRequests.graphql */; };
+		4CD78718F3E324B3712D8749 /* RepositoryFragments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852B7F77C1A9D5781813599 /* RepositoryFragments.swift */; };
+		79D3E71A964058835DDEC844 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689D42C59F1B0DC8ACDF95A /* Types.swift */; };
+		9C5591BAB72244F4F9C9690E /* RepositoryRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91DA19599442F053A837F3 /* RepositoryRequests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0459248B11CC2B366463087D /* Pods_ApolloCodegen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApolloCodegen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		114AD9122065685E0053E531 /* ApolloCodegen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApolloCodegen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		114AD9152065685E0053E531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		114AD9172065685E0053E531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		114AD91A2065685E0053E531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		114AD91C2065685E0053E531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		114AD91F2065685E0053E531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		114AD9212065685E0053E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114AD92F206571C70053E531 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		114AD931206571D70053E531 /* RepositoryFragments.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = RepositoryFragments.graphql; sourceTree = "<group>"; };
+		114AD933206571E10053E531 /* RepositoryRequests.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = RepositoryRequests.graphql; sourceTree = "<group>"; };
+		2689D42C59F1B0DC8ACDF95A /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		9BC1891645546580DD26DD9E /* Pods-ApolloCodegen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApolloCodegen.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApolloCodegen/Pods-ApolloCodegen.release.xcconfig"; sourceTree = "<group>"; };
+		A852B7F77C1A9D5781813599 /* RepositoryFragments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoryFragments.swift; sourceTree = "<group>"; };
+		AD91DA19599442F053A837F3 /* RepositoryRequests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoryRequests.swift; sourceTree = "<group>"; };
+		F8B5510CCA5D8111912A6D5D /* Pods-ApolloCodegen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApolloCodegen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApolloCodegen/Pods-ApolloCodegen.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		114AD90F2065685E0053E531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101F2DEB42B95054B6F0D837 /* Pods_ApolloCodegen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		081C7889438C63E6EAD146B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0459248B11CC2B366463087D /* Pods_ApolloCodegen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		114AD9092065685E0053E531 = {
+			isa = PBXGroup;
+			children = (
+				114AD9142065685E0053E531 /* ApolloCodegen */,
+				114AD9132065685E0053E531 /* Products */,
+				B49F9A1447056718C1CC9243 /* Pods */,
+				081C7889438C63E6EAD146B0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		114AD9132065685E0053E531 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				114AD9122065685E0053E531 /* ApolloCodegen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		114AD9142065685E0053E531 /* ApolloCodegen */ = {
+			isa = PBXGroup;
+			children = (
+				114AD9152065685E0053E531 /* AppDelegate.swift */,
+				114AD9172065685E0053E531 /* ViewController.swift */,
+				114AD9192065685E0053E531 /* Main.storyboard */,
+				114AD91C2065685E0053E531 /* Assets.xcassets */,
+				114AD91E2065685E0053E531 /* LaunchScreen.storyboard */,
+				114AD9212065685E0053E531 /* Info.plist */,
+				114AD928206569850053E531 /* GraphQL */,
+			);
+			path = ApolloCodegen;
+			sourceTree = "<group>";
+		};
+		114AD928206569850053E531 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				114AD92F206571C70053E531 /* schema.json */,
+				114AD929206569850053E531 /* Generated */,
+				114AD92C206569850053E531 /* Sources */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		114AD929206569850053E531 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				114AD92A206569850053E531 /* Fragments */,
+				114AD92B206569850053E531 /* Requests */,
+				2689D42C59F1B0DC8ACDF95A /* Types.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		114AD92A206569850053E531 /* Fragments */ = {
+			isa = PBXGroup;
+			children = (
+				A852B7F77C1A9D5781813599 /* RepositoryFragments.swift */,
+			);
+			path = Fragments;
+			sourceTree = "<group>";
+		};
+		114AD92B206569850053E531 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				AD91DA19599442F053A837F3 /* RepositoryRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		114AD92C206569850053E531 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				114AD92D206569850053E531 /* Fragments */,
+				114AD92E206569850053E531 /* Requests */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		114AD92D206569850053E531 /* Fragments */ = {
+			isa = PBXGroup;
+			children = (
+				114AD931206571D70053E531 /* RepositoryFragments.graphql */,
+			);
+			path = Fragments;
+			sourceTree = "<group>";
+		};
+		114AD92E206569850053E531 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				114AD933206571E10053E531 /* RepositoryRequests.graphql */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B49F9A1447056718C1CC9243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8B5510CCA5D8111912A6D5D /* Pods-ApolloCodegen.debug.xcconfig */,
+				9BC1891645546580DD26DD9E /* Pods-ApolloCodegen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		114AD9112065685E0053E531 /* ApolloCodegen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114AD9242065685E0053E531 /* Build configuration list for PBXNativeTarget "ApolloCodegen" */;
+			buildPhases = (
+				5482889EF6C028BAF5B1D6C2 /* [CP] Check Pods Manifest.lock */,
+				114AD927206569310053E531 /* Generate Apollo GraphQL API */,
+				114AD90E2065685E0053E531 /* Sources */,
+				114AD90F2065685E0053E531 /* Frameworks */,
+				114AD9102065685E0053E531 /* Resources */,
+				DD9886429338649446A70D5D /* [CP] Embed Pods Frameworks */,
+				46130800D02180ED4B0A4ACC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApolloCodegen;
+			productName = ApolloCodegen;
+			productReference = 114AD9122065685E0053E531 /* ApolloCodegen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		114AD90A2065685E0053E531 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Beniamin;
+				TargetAttributes = {
+					114AD9112065685E0053E531 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 114AD90D2065685E0053E531 /* Build configuration list for PBXProject "ApolloCodegen" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 114AD9092065685E0053E531;
+			productRefGroup = 114AD9132065685E0053E531 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				114AD9112065685E0053E531 /* ApolloCodegen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		114AD9102065685E0053E531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114AD930206571C70053E531 /* schema.json in Resources */,
+				114AD9202065685E0053E531 /* LaunchScreen.storyboard in Resources */,
+				114AD91D2065685E0053E531 /* Assets.xcassets in Resources */,
+				114AD91B2065685E0053E531 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		114AD927206569310053E531 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\nScripts/apollo-codegen.rb $APOLLO_FRAMEWORK_PATH $PROJECT_NAME/GraphQL";
+		};
+		46130800D02180ED4B0A4ACC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApolloCodegen/Pods-ApolloCodegen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5482889EF6C028BAF5B1D6C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApolloCodegen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD9886429338649446A70D5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ApolloCodegen/Pods-ApolloCodegen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApolloCodegen/Pods-ApolloCodegen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		114AD90E2065685E0053E531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114AD932206571D70053E531 /* RepositoryFragments.graphql in Sources */,
+				114AD9182065685E0053E531 /* ViewController.swift in Sources */,
+				114AD9162065685E0053E531 /* AppDelegate.swift in Sources */,
+				114AD934206571E10053E531 /* RepositoryRequests.graphql in Sources */,
+				4CD78718F3E324B3712D8749 /* RepositoryFragments.swift in Sources */,
+				79D3E71A964058835DDEC844 /* Types.swift in Sources */,
+				9C5591BAB72244F4F9C9690E /* RepositoryRequests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		114AD9192065685E0053E531 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				114AD91A2065685E0053E531 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		114AD91E2065685E0053E531 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				114AD91F2065685E0053E531 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		114AD9222065685E0053E531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		114AD9232065685E0053E531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		114AD9252065685E0053E531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B5510CCA5D8111912A6D5D /* Pods-ApolloCodegen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84P8W4YXKB;
+				INFOPLIST_FILE = ApolloCodegen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beniamin.ApolloCodegen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		114AD9262065685E0053E531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC1891645546580DD26DD9E /* Pods-ApolloCodegen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84P8W4YXKB;
+				INFOPLIST_FILE = ApolloCodegen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beniamin.ApolloCodegen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		114AD90D2065685E0053E531 /* Build configuration list for PBXProject "ApolloCodegen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114AD9222065685E0053E531 /* Debug */,
+				114AD9232065685E0053E531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114AD9242065685E0053E531 /* Build configuration list for PBXNativeTarget "ApolloCodegen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114AD9252065685E0053E531 /* Debug */,
+				114AD9262065685E0053E531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 114AD90A2065685E0053E531 /* Project object */;
+}

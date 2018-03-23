@@ -1,0 +1,5 @@
+fragment RepositoryInfo on Repository {
+  createdAt
+  description
+  viewerPermission
+}
