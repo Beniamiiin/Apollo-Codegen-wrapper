@@ -14,18 +14,18 @@ The problem of original [apollo-codegen](https://github.com/apollographql/apollo
 
 ```
 GraphQL
-	Generated
-		Types.swift
-		Fragments
-			...
-		Requests
-			...
-	Sources
-		Fragments
-			...
-		Requests
-			...
-	schema.json
+   Generated
+     Types.swift
+     Fragments
+       ...
+     Requests
+       ...
+   Sources
+     Fragments
+       ...
+     Requests
+       ...
+     schema.json
 ```
 
 `GraphQL/Sources/Fragments` - this folder should contain `*.graphql` files with fragments
