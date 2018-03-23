@@ -1,4 +1,4 @@
-Ruby wrapper over [apollo-codegen](https://github.com/apollographql/apollo-codegen).
+# Ruby wrapper over [apollo-codegen](https://github.com/apollographql/apollo-codegen)
 
 ## Reason
 
