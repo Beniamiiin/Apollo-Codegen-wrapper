@@ -60,7 +60,7 @@ echo "error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure
 exit 1
 fi
 
-Scripts/apollo-codegen.rb $APOLLO_FRAMEWORK_PATH $TARGET_NAME/GraphQL
+Scripts/apollo-codegen.rb $APOLLO_FRAMEWORK_PATH $PROJECT_NAME/GraphQL
 ```
 
 The script above will invoke apollo-codegen through the check-and-run-apollo-codegen.sh wrapper script, which is actually contained in the Apollo.framework bundle. The main reason for this is to check whether the version of apollo-codegen installed on your system is compatible with the framework version installed in your project, and to warn you if it isn’t. Without this check, you could end up generating code that is incompatible with the runtime code contained in the framework.
