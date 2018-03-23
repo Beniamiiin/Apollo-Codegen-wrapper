@@ -16,17 +16,17 @@
 ```
 GraphQL
   Generated
-	Types.swift
-	Fragments
-		...
-	Requests
-		...
+    Types.swift
+    Fragments
+      ...
+    Requests
+      ...
   Sources
-	Fragments
-		...
-	Requests
-		...
-	schema.json
+    Fragments
+      ...
+    Requests
+      ...
+    schema.json
 ```
 
 `GraphQL/Sources/Fragments` - this folder should contain `*.graphql` files with fragments
