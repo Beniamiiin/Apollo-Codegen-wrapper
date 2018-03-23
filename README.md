@@ -1,8 +1,9 @@
-# Ruby wrapper over [apollo-codegen](https://github.com/apollographql/apollo-codegen)
+# Wrapper over [apollo-codegen](https://github.com/apollographql/apollo-codegen)
 
-## Reason
+## Reasons why I wrote a wrapper
 
-The problem of original [apollo-codegen](https://github.com/apollographql/apollo-codegen) tool is that it generates all requests and all fragments `*.graphql` files in one `API.swift` file. It's not a good idea because it's not comfortable and in one day Xcode can't open this file or you will face delays during scrolling.
+1. With the original tool so dificult to store fragments and requests in different files because it can't generate them, actually can but with big problems.
+2. The original tool generate all fragment and all requests in one `API.swift` file. It's not a good idea because it's not comfortable and maybe in one day Xcode can't open this file or you will face delays during scrolling.
 
 ## Available arguments
 
@@ -14,17 +15,17 @@ The problem of original [apollo-codegen](https://github.com/apollographql/apollo
 
 ```
 GraphQL
-	Generated
-		Types.swift
-		Fragments
-			...
-		Requests
-			...
-	Sources
-		Fragments
-			...
-		Requests
-			...
+  Generated
+	Types.swift
+	Fragments
+		...
+	Requests
+		...
+  Sources
+	Fragments
+		...
+	Requests
+		...
 	schema.json
 ```
 
@@ -65,10 +66,16 @@ Scripts/apollo-codegen.rb $APOLLO_FRAMEWORK_PATH $PROJECT_NAME/GraphQL
 
 The script above will invoke apollo-codegen through the check-and-run-apollo-codegen.sh wrapper script, which is actually contained in the Apollo.framework bundle. The main reason for this is to check whether the version of apollo-codegen installed on your system is compatible with the framework version installed in your project, and to warn you if it isn’t. Without this check, you could end up generating code that is incompatible with the runtime code contained in the framework.
 
+## Manual using
+
+Also you can use a wrapper by your self, just execute this script in terminal:
+`ruby Scripts/apollo-codegen.rb ApolloCodegen/GraphQL`
+You just have to pass the path to `GraphQL` directory and you don't have to pass `Apollo framework` path because if the script is calling directly from terminal will be using original `apollo-codegen`.
+
 ## More information about Apollo
 1. An original tool [apollo-codegen](https://github.com/apollographql/apollo-codegen)
 2. Apollo iOS [docs](https://www.apollographql.com/docs/ios/)
 
-License
+## License
 
 The script is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
