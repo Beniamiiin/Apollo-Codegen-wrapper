@@ -73,6 +73,7 @@ Also you can use a wrapper by your self, just execute this script in terminal:
 You just have to pass the path to `GraphQL` directory and you don't have to pass `Apollo framework` path because if the script is calling directly from terminal will be using original `apollo-codegen`.
 
 ## More information about Apollo
+
 1. An original tool [apollo-codegen](https://github.com/apollographql/apollo-codegen)
 2. Apollo iOS [docs](https://www.apollographql.com/docs/ios/)
 
