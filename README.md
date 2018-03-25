@@ -3,7 +3,7 @@
 ## Reasons why I wrote a wrapper
 
 1. With the original tool so dificult to store fragments and requests in different files because it can't generate them, actually can but with big problems.
-2. The original tool generate all fragment and all requests in one `API.swift` file. It's not a good idea because it's not comfortable and maybe in one day Xcode can't open this file or you will face delays during scrolling.
+2. The original tool generate all fragments and all requests in one `API.swift` file. It's not a good idea because it's not comfortable and maybe in one day Xcode can't open this file or you will face delays during scrolling.
 
 ## Available arguments
 
