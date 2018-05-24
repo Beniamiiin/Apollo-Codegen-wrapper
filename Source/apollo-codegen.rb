@@ -4,9 +4,15 @@ require 'xcodeproj'
 
 # Constants
 
-APOLLO_CODEGEN_SCRIPT = "#{ARGV[0]}/check-and-run-apollo-codegen.sh"
-GRAPHQL_DIRECTORY_PATH = ARGV[1]
-XCODEPROJ_PATH = ARGV[2] != nil ? ARGV[2] : Dir["*.xcodeproj"].first
+FROM_COMMAND_LINE = `echo "$CONFIGURATION"`.tr("\n", '').empty?
+APOLLO_CODEGEN_SCRIPT = FROM_COMMAND_LINE ? "apollo-codegen" : "#{ARGV[0]}/check-and-run-apollo-codegen.sh"
+GRAPHQL_DIRECTORY_PATH = FROM_COMMAND_LINE ? ARGV[0] : ARGV[1]
+
+if FROM_COMMAND_LINE
+	XCODEPROJ_PATH = ARGV[1] != nil ? ARGV[1] : Dir["*.xcodeproj"].first
+else
+	XCODEPROJ_PATH = ARGV[2] != nil ? ARGV[2] : Dir["*.xcodeproj"].first
+end
 
 SOURCE_FILES_PATH = "#{GRAPHQL_DIRECTORY_PATH}/Sources"
 FRAGMENTS_DIRECTORY_PATH = "#{SOURCE_FILES_PATH}/Fragments"
@@ -71,13 +77,15 @@ def generate_fragments(xcodeproj, update_xcode_project)
 	Dir["#{FRAGMENTS_DIRECTORY_PATH}/*.graphql"].each do |file_path|
 		fragments_files_paths = Dir["#{FRAGMENTS_DIRECTORY_PATH}/*.graphql"].each.select { |path| path != file_path }.map { |path| path }.join(" ")
 		`#{APOLLO_CODEGEN_SCRIPT} generate #{file_path} #{fragments_files_paths} --schema #{SCHEME_FILE_PATH} --output #{GENERATED_FRAGMENTS_DIRECTORY_PATH} --only #{file_path}`
-
+	
 		name = File.basename(file_path, File.extname(file_path))
 		add_file_to_xcode(xcodeproj, update_xcode_project, GENERATED_FRAGMENTS_DIRECTORY_PATH, name)
 	end
 
 	types_file_name = 'Types'
 	generated_file_path = "#{GENERATED_FRAGMENTS_DIRECTORY_PATH}/#{types_file_name}.graphql.swift"
+	
+	return unless File.exist?(generated_file_path)
 
 	line_count = `wc -l "#{generated_file_path}"`.strip.split(' ')[0].to_i
 
@@ -93,7 +101,7 @@ def generate_fragments(xcodeproj, update_xcode_project)
 			xcodeproj.targets.first.add_file_references([file])
 		end
 	else
-		File.delete(generated_file_path) if File.exist?(generated_file_path)
+		File.delete(generated_file_path)
 	end
 end
 
